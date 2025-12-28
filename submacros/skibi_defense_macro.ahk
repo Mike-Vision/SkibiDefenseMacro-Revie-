@@ -14,7 +14,8 @@ OnError(ErrorHandler)
 
 ErrorHandler(Error, Mode) {
     sd_LogError(Error)
-    MsgBox(0x10, "Error Detected", "An error occurred!`n`nError: " Error.What "`nExtra: " Error.Extra "`nWhat: " Error.Message "`n`nCheck debug_log.txt for details.")
+    MsgBox(0x10, "Error Detected", "An error occurred!`n`nError: " Error.What "`nExtra: " Error.Extra "`nWhat: " Error.Message "`n`nCheck debug_log.txt for details."
+    )
     return Mode = "Return" ? -1 : 0
 }
 
@@ -424,8 +425,9 @@ sd_Start(*) {
     if ((DiscordCheck) && (((DiscordMode = 1) && RegExMatch(WebhookURL,
         "i)^https:\/\/(canary\.|ptb\.)?(discord|discordapp)\.com\/api\/webhooks\/([\d]+)\/([a-z0-9_-]+)$"))
     || ((DiscordMode = 2) && (ReportChannelCheck = 1) && (ReportChannelID || MainChannelID)))) {
-        Run('"' exe_path64 '" /script "' A_MacroWorkingDir 'submacros\StatMonitor.ahk" "' MacroName '" "' VersionID '" "' offsetY '" "' windowDimensions '" "' ChapterGrindMode%
-            CurrentChapterNum% '" "' Month '" "' InLobby '"')
+        grindModeVar := ChapterGrindMode%CurrentChapterNum%
+        Run('"' exe_path64 '" /script "' A_MacroWorkingDir 'submacros\StatMonitor.ahk" "' MacroName '" "' VersionID '" "' offsetY '" "' windowDimensions '" "' grindModeVar '" "' Month '" "' InLobby '"'
+        )
     }
     ; start main loop
     sd_SetStatus("Begin", "Main Loop")
@@ -915,7 +917,7 @@ MainGUI["StartButton"].Enabled := 1
 sd_LogError(Error) {
     debugLog := A_SettingsWorkingDir "debug_log.txt"
     timestamp := FormatTime(, "yyyy-MM-dd HH:mm:ss")
-    
+
     logEntry := "
     (LTrim Join`n
     ==========================================
@@ -930,13 +932,13 @@ sd_LogError(Error) {
     Line: " Error.Line "
     Stack:
     )"
-    
-    if IsSet(Error.Stack) {
+
+    try {
         logEntry .= Error.Stack
-    } else {
+    } catch {
         logEntry .= "No stack trace available"
     }
-    
+
     logEntry .= "`n
     (LTrim
     
@@ -950,16 +952,16 @@ sd_LogError(Error) {
     
     ==========================================
     )"
-    
+
     try {
         FileAppend(logEntry, debugLog)
-    } catch Error {
-        MsgBox(0x10, "Debug Log Error", "Could not write to debug log!`n`nPath: " debugLog "`nError: " Error.Message)
+    } catch as err {
+        MsgBox(0x10, "Debug Log Error", "Could not write to debug log!`n`nPath: " debugLog "`nError: " err.Message)
     }
 }
 
 sd_DebugInfo() {
-    info := "DEBUG INFORMATION`n" 
+    info := "DEBUG INFORMATION`n"
         . "========================`n"
         . "Macro State: " MacroState "`n"
         . "Current Action: " CurrentAction "`n"
@@ -973,12 +975,13 @@ sd_DebugInfo() {
         . "AutoHotkey Version: v" A_AhkVersion "`n"
         . "OS Version: " A_OSVersion "`n"
         . "Working Directory: " A_MacroWorkingDir "`n"
-    
+
     MsgBox(0x40, "Debug Info", info)
-    FileAppend("[" FormatTime(, "yyyy-MM-dd HH:mm:ss") "] Debug Info Requested`n" info "`n`n", A_SettingsWorkingDir "debug_log.txt")
+    FileAppend("[" FormatTime(, "yyyy-MM-dd HH:mm:ss") "] Debug Info Requested`n" info "`n`n", A_SettingsWorkingDir "debug_log.txt"
+    )
 }
 
-f11::sd_DebugInfo()
+f11:: sd_DebugInfo()
 MainGUI["PauseButton"].Enabled := 1
 MainGUI["StopButton"].Enabled := 1
 SetLoadProgress(99, MacroName " (Loading: ")

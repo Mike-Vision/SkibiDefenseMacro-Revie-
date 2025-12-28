@@ -5,3 +5,112 @@
 [22/12][02:11:32] End: Macro
 [22/12][02:11:40] GitHub: Checking for Updates
 [22/12][02:11:40] GUI: Startup
+==========================================
+[" timestamp "]
+ERROR DETECTED
+==========================================
+What: " Error.What "
+Extra: " Error.Extra "
+Message: " Error.Message "
+What: " Error.What "
+File: " Error.File "
+Line: " Error.Line "
+Stack:C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\Roblox.ahk (80) : [GetYOffset] If A_LoopOuterIndex = 3
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\functions.ahk (321) : [CheckDisplaySpecs] hwnd := GetRobloxHWND(), GetRobloxClientPos(hwnd), offsetY := GetYOffset(hwnd, &offsetfail)
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\submacros\skibi_defense_macro.ahk (244) : [] CheckDisplaySpecs()
+> Auto-execute
+
+
+System Info:
+- OS: " A_OSVersion "
+- Bitness: " (A_PtrSize * 8) "-bit
+- AutoHotkey: v" A_AhkVersion "
+- Working Dir: " A_MacroWorkingDir "
+- Macro State: " MacroState "
+- Current Action: " CurrentAction "
+
+==========================================[28/12][14:00:22] GitHub: Checking for Updates
+[28/12][14:00:22] GUI: Startup
+==========================================
+[" timestamp "]
+ERROR DETECTED
+==========================================
+What: " Error.What "
+Extra: " Error.Extra "
+Message: " Error.Message "
+What: " Error.What "
+File: " Error.File "
+Line: " Error.Line "
+Stack:C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (54) : [Array.Prototype.__Item.Get] posW := TextExtent((size := Round(latest_release["assets"][1]["size"]/1048576, 2)) " MB // Downloads: " (downloads := latest_release["assets"][1]["download_count"]), UpdateText)
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (54) : [sd_AutoUpdateGUI] posW := TextExtent((size := Round(latest_release["assets"][1]["size"]/1048576, 2)) " MB // Downloads: " (downloads := latest_release["assets"][1]["download_count"]), UpdateText)
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (31) : [sd_AutoUpdateHandler] sd_AutoUpdateGUI()
+
+
+System Info:
+- OS: " A_OSVersion "
+- Bitness: " (A_PtrSize * 8) "-bit
+- AutoHotkey: v" A_AhkVersion "
+- Working Dir: " A_MacroWorkingDir "
+- Macro State: " MacroState "
+- Current Action: " CurrentAction "
+
+==========================================[28/12][14:00:23] GitHub: Update found! v1.0.0
+[28/12][14:03:59] Begin: Macro
+[28/12][14:04:00] Begin: Main Loop
+[28/12][14:04:00] Joining: Endless Shield
+[28/12][14:04:10] End: Macro
+[28/12][14:04:18] GitHub: Checking for Updates
+==========================================
+[" timestamp "]
+ERROR DETECTED
+==========================================
+What: " Error.What "
+Extra: " Error.Extra "
+Message: " Error.Message "
+What: " Error.What "
+File: " Error.File "
+Line: " Error.Line "
+Stack:C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (54) : [Array.Prototype.__Item.Get] posW := TextExtent((size := Round(latest_release["assets"][1]["size"]/1048576, 2)) " MB // Downloads: " (downloads := latest_release["assets"][1]["download_count"]), UpdateText)
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (54) : [sd_AutoUpdateGUI] posW := TextExtent((size := Round(latest_release["assets"][1]["size"]/1048576, 2)) " MB // Downloads: " (downloads := latest_release["assets"][1]["download_count"]), UpdateText)
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (31) : [sd_AutoUpdateHandler] sd_AutoUpdateGUI()
+
+
+System Info:
+- OS: " A_OSVersion "
+- Bitness: " (A_PtrSize * 8) "-bit
+- AutoHotkey: v" A_AhkVersion "
+- Working Dir: " A_MacroWorkingDir "
+- Macro State: " MacroState "
+- Current Action: " CurrentAction "
+
+==========================================[28/12][14:04:18] GUI: Startup
+[28/12][14:04:18] GitHub: Update found! v1.0.0
+[28/12][14:04:32] Begin: Macro
+[28/12][14:04:32] Begin: Main Loop
+[28/12][14:04:33] Joining: Endless Shield
+[28/12][14:09:47] GitHub: Checking for Updates
+[28/12][14:09:47] GUI: Startup
+==========================================
+[" timestamp "]
+ERROR DETECTED
+==========================================
+What: " Error.What "
+Extra: " Error.Extra "
+Message: " Error.Message "
+What: " Error.What "
+File: " Error.File "
+Line: " Error.Line "
+Stack:C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (54) : [Array.Prototype.__Item.Get] posW := TextExtent((size := Round(latest_release["assets"][1]["size"]/1048576, 2)) " MB // Downloads: " (downloads := latest_release["assets"][1]["download_count"]), UpdateText)
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (54) : [sd_AutoUpdateGUI] posW := TextExtent((size := Round(latest_release["assets"][1]["size"]/1048576, 2)) " MB // Downloads: " (downloads := latest_release["assets"][1]["download_count"]), UpdateText)
+C:\Users\PC\Downloads\SkibiDefenseMacro-Revie-\lib\mainFiles\update_checker.ahk (31) : [sd_AutoUpdateHandler] sd_AutoUpdateGUI()
+
+
+System Info:
+- OS: " A_OSVersion "
+- Bitness: " (A_PtrSize * 8) "-bit
+- AutoHotkey: v" A_AhkVersion "
+- Working Dir: " A_MacroWorkingDir "
+- Macro State: " MacroState "
+- Current Action: " CurrentAction "
+
+==========================================[28/12][14:09:47] GitHub: Update found! v1.0.0
